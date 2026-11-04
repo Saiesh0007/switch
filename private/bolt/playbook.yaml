@@ -1,0 +1,36 @@
+# BOLT PRIVATE. Read only by the Bolt Counsel process. Sample data for the demo.
+company: Bolt Retail
+authority: daniel
+canary: BOLT-CANARY-4402-RISK-FLOOR
+
+clauses:
+  liability_cap:
+    prefers: high
+    ladder: [24, 18, 15, 12]
+    auto_through: 18
+    signoff_through: 12
+    rationale: Risk policy asks for 18 months. The General Counsel may accept 12 for a vendor this critical.
+  payment_terms:
+    prefers: high
+    ladder: [90, 60, 45, 30]
+    auto_through: 60
+    signoff_through: 30
+    rationale: Treasury prefers 60 days or longer. Anything shorter needs legal sign-off.
+  breach_notice:
+    prefers: low
+    ladder: [12, 24, 48]
+    auto_through: 48
+    signoff_through: 48
+    rationale: Our regulator's clock leaves 48 hours at most for the vendor's notice.
+  uptime_sla:
+    prefers: high
+    ladder: [99.99, 99.95, 99.9]
+    auto_through: 99.9
+    signoff_through: 99.9
+    rationale: Checkout can tolerate 99.9 thanks to the offline fallback.
+  governing_law:
+    prefers: order
+    ladder: [New York, Delaware, England]
+    auto_through: New York
+    signoff_through: Delaware
+    rationale: Our legal team is based in New York.

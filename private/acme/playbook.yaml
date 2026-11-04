@@ -1,0 +1,36 @@
+# ACME PRIVATE. Read only by the Acme Counsel process. Sample data for the demo.
+company: Acme Cloud
+authority: priya
+canary: ACME-CANARY-7731-BOARD-CEILING
+
+clauses:
+  liability_cap:
+    prefers: low
+    ladder: [6, 9, 12, 15, 18]
+    auto_through: 9
+    signoff_through: 18
+    rationale: Our insurer covers claims up to 18 months of fees. Beyond that the board has to approve.
+  payment_terms:
+    prefers: low
+    ladder: [30, 45, 60]
+    auto_through: 45
+    signoff_through: 60
+    rationale: Finance can carry 60-day receivables for one enterprise customer this year.
+  breach_notice:
+    prefers: high
+    ladder: [72, 48, 24]
+    auto_through: 48
+    signoff_through: 24
+    rationale: Security can confirm most incidents within 48 hours. 24 is possible but strains on-call.
+  uptime_sla:
+    prefers: low
+    ladder: [99.5, 99.9, 99.95]
+    auto_through: 99.9
+    signoff_through: 99.95
+    rationale: 99.9 matches our current architecture. 99.95 needs a second region.
+  governing_law:
+    prefers: order
+    ladder: [Delaware, New York, England]
+    auto_through: New York
+    signoff_through: England
+    rationale: We already have outside counsel in Delaware and New York.
